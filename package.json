@@ -1,0 +1,21 @@
+{
+  "name": "testcafeframeworksetup",
+  "version": "1.0.0",
+  "description": "TestCafe framework example",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "testcafe chrome functionalTest/tests/ -e -r xunit:res.xml",
+    "safari": "testcafe safari functionalTest/tests/ -e"
+  },
+  "author": "Eduardo",
+  "license": "ISC",
+  "dependencies": {
+    "testcafe-reporter-xunit": "^2.1.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.1.0",
+    "testcafe": "^1.1.0",
+    "testcafe-reporter-slack": "0.0.6"
+  }
+}
