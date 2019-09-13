@@ -7,7 +7,7 @@ import { MAIN_URL } from '../utils/constants'
 fixture`Access to login homepage`
     .page(`${MAIN_URL}`);
 
-test.only('Access to login homepage and click on login button', async (t) => {
+test('Access to login homepage and click on login button', async (t) => {
     await t
         .expect(HomePage.header.innerText).eql('Welcome to our test page!')
         .click(HomePage.loginButton);
