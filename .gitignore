@@ -2,6 +2,7 @@
 node_modules
 /dist
 test-reports
+allure
 
 # local env files
 .env.local

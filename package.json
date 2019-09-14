@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./bin/www",
-    "test": "testcafe chrome functionalTest/tests/ -e -r xunit:res.xml",
+    "test": "testcafe chrome functionalTest/tests/ -e --reporter slack,xunit:res.xml",
+    "test:allure": "testcafe chrome functionalTest/tests/ -e --reporter allure",
+    "allure:generate":"allure generate allure/allure-results --clean -o allure/allure-report && allure open allure/allure-report",
+    "test2":"npm run test:allure && npm run allure:generate",
     "safari": "testcafe safari functionalTest/tests/ -e"
   },
   "author": "Eduardo",
@@ -14,8 +17,10 @@
     "testcafe-reporter-xunit": "^2.1.0"
   },
   "devDependencies": {
+    "allure-commandline": "^2.13.0",
     "dotenv": "^8.1.0",
     "testcafe": "^1.1.0",
+    "testcafe-reporter-allure": "^1.0.5",
     "testcafe-reporter-slack": "0.0.6"
   }
 }
