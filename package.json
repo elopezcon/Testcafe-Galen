@@ -7,7 +7,8 @@
     "start": "node ./bin/www",
     "test": "testcafe chrome functionalTest/tests/ -e --reporter slack,xunit:res.xml",
     "test:allure": "testcafe chrome functionalTest/tests/ -e --reporter allure",
-    "allure:generate":"allure generate allure/allure-results --clean -o allure/allure-report && allure open allure/allure-report",
+    "allure:generate":"allure generate allure/allure-results --clean -o allure/allure-report",
+    "allure:generate:open":"allure generate allure/allure-results --clean -o allure/allure-report && allure open allure/allure-report",
     "test2":"npm run test:allure && npm run allure:generate",
     "safari": "testcafe safari functionalTest/tests/ -e"
   },
