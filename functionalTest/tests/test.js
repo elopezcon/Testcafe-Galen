@@ -13,7 +13,7 @@ test.only('Access to login homepage and click on login button', async (t) => {
         .click(HomePage.loginButton);
 });
 
-test.only('Start login process happy path', async (t) => {
+test('Start login process happy path', async (t) => {
     await t
         .click(HomePage.loginButton)
         .typeText(LoginPage.userTextField, 'testuser@example.com')
